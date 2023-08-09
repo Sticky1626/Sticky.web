@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sticky.web</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+<style>
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: rgb(30, 30, 30);
+  }
+  .header {
+    background-color: #2f70b8; /* Change header color to match text color */
+    color: white;
+    padding: 15px 20px; /* Increased padding for a thicker header */
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    font-family: 'Roboto', sans-serif; /* Apply Roboto font */
+  }
+  .header a {
+    color: white;
+    text-decoration: none;
+    margin-left: 15px;
+    font-weight: bold;
+    transition: transform 0.2s ease-in-out; /* Add animation transition */
+  }
+  .header a:hover {
+    transform: translateY(-3px); /* Move link up slightly on hover */
+  }
+  .center-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 65px); /* Adjust to account for header height */
+    margin-top: -65px; /* Move content closer to the top */
+  }
+  .center-content h1 {
+    font-size: 66px;
+    color: white; /* Change text color to white */
+    margin-bottom: 0; /* Remove margin bottom */
+    font-family: 'Roboto', sans-serif; /* Apply Roboto font */
+  }
+  .center-content h1:hover {
+    animation: wiggle 0.3s infinite alternate; /* Add animation to the text on hover */
+  }
+  @keyframes wiggle {
+    from {
+      transform: translateY(0);
+    }
+    to {
+      transform: translateY(-5px); /* Move text up */
+    }
+  }
+  .center-content h2 {
+    font-size: 24px; /* Adjust font size */
+    color: #2f70b8; /* Set text color to a darker blue */
+    margin-top: 5px; /* Add a small margin-top for spacing */
+    font-family: 'Roboto', sans-serif; /* Apply Roboto font */
+    transition: transform 0.2s ease-in-out; /* Add animation transition */
+  }
+  .center-content h2:hover {
+    transform: translateY(-3px); /* Move text up slightly on hover */
+  }
+  #contact {
+    font-family: 'Roboto', sans-serif; /* Apply the 'Roboto' font to the Contact Me section */
+  }
+  #contact ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex; /* Display links horizontally */
+    justify-content: center; /* Center-align the links horizontally */
+  }
+  #contact li {
+    margin-right: 20px; /* Add horizontal spacing between links */
+  }
+  #contact a {
+    color: #2f70b8; /* Set link color to a darker blue */
+    text-decoration: none; /* Remove underline */
+    display: flex;
+    align-items: center;
+  }
+  #contact a i {
+    margin-right: 5px; /* Add spacing between icon and text */
+  }
+  #contact a:hover {
+    transform: translateY(3px); /* Move link down slightly on hover */
+  }
+  #contact p {
+    color: #2f70b8; /* Set text color to a darker blue */
+  }
+  .separator {
+    width: 100%; /* Span the entire width of the screen */
+    height: 4px; /* Adjust the thickness of the separator */
+    background-color: #2f70b8; /* Set the same color as the text color */
+    margin-top: 15px; /* Add space between links and separator */
+    margin-bottom: 15px; /* Add space between separator and other content */
+  }
+  #work-box {
+    background-color: #2f70b8; /* Match the color of the "I'm a Developer" text */
+    border-radius: 15px; /* Rounded corners */
+    padding: 20px; /* Add padding inside the box */
+    width: 80%; /* Set the width of the box */
+    margin-top: 30px; /* Add space between the box and other content */
+    font-family: 'Roboto', sans-serif; /* Apply Roboto font */
+    text-align: center; /* Center-align the text within the box */
+  }
+  #work-title {
+    font-size: 28px;
+    color: white;
+    margin-bottom: 15px; /* Add space below the title */
+  }
+  #additional-box {
+    background-color: #2f70b8; /* Match the color of the "Currently Working On" box */
+    border-radius: 15px; /* Rounded corners */
+    padding: 20px; /* Add padding inside the box */
+    width: 80%; /* Set the width of the box */
+    margin-top: 30px; /* Add space between the box and other content */
+    font-family: 'Roboto', sans-serif; /* Apply Roboto font */
+    text-align: center; /* Center-align the text within the box */
+    margin-bottom: 30px; /* Add space below the box */
+  }
+  #contact-header {
+    background-color: #2f70b8; /* Match the color of the boxes */
+    width: 100%; /* Span the entire width */
+    padding: 10px 0; /* Adjust padding */
+    color: white;
+    font-size: 20px;
+    text-align: center;
+  }
+</style>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="header">
+    <a href="#contact">Contact</a>
+    <a href="#work">Work</a>
+  </div>
+  
+  <div class="center-content">
+    <h1>Hey, I'm Sticky</h1>
+    <h2>I'm a Developer</h2>
+  </div>
+  
+  <div id="work" class="center-content">
+    <h1></h1>
+    <div id="work-box">
+      <h2 id="work-title">Currently Working On</h2>
+    </div>
+    
+    <!-- Additional box -->
+    <div id="additional-box" class="center-content">
+      <h2>Another Box</h2>
+      <h1>Coming Soon</h1>
+      
+    </div>
+  </div>
+  
+  <div id="contact" class="center-content">
+    <h1>Contact Me</h1
+    <div id="contact-header" style="display: flex; justify-content: center; align-items: center;">
+      <a href="https://discordapp.com/users/sticky1626" target="_blank" style="color: 2f70b8; text-decoration: none; display: flex; align-items: center;">
+        <i class="fab fa-discord" style="margin-right: 6px;"></i> Discord
+      </a>
+    </div>
+    <ul>
+      <!-- ... Other contact links ... -->
+    </ul>
+  </div>
+  
+  <!-- ... Remaining HTML code ... -->
